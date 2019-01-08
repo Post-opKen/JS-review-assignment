@@ -24,13 +24,7 @@ function fizzBuzz()
 //returns the number of "B"s in the given string
 function countBs(str)
 {
-    let count = 0;
-    for (let i = 0; i < str.length; i++) {
-        if(str[i] === "B") {
-            count++;
-        }
-    }
-    return count;
+    return countChar("B", str);
 }
 
 //returns the number of the given character in the given string

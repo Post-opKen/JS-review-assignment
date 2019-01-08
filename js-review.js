@@ -33,6 +33,18 @@ function countBs(str)
     return count;
 }
 
+//returns the number of the given character in the given string
+function countChar(needle, haystack)
+{
+    let count = 0;
+    for (let i = 0; i < haystack.length; i++) {
+        if(haystack[i] === needle) {
+            count++;
+        }
+    }
+    return count;
+}
+
 
 //test my functions
 fizzBuzz();
@@ -43,3 +55,10 @@ console.log("Counting the B's in: BbbbbbB")
 console.log(countBs("BbbbbbB"));
 console.log("Counting the B's in: buBBles")
 console.log(countBs("BuBBles"));
+
+console.log("Counting the h's in: hello")
+console.log(countChar("h", "hello"));
+console.log("Counting the !'s in: BbbbbbB")
+console.log(countChar("!", "BbbbbbB"));
+console.log("Counting the ?'s in: buBBles?????")
+console.log(countChar("?", "buBBles?????"));

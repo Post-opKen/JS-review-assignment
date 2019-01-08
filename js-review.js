@@ -1,15 +1,5 @@
 console.log("Introduction to Javascript");
 
-/*Write a program that uses console.log to print all the numbers from 1 to 100,
-with two exceptions. For numbers divisible by 3, print "Fizz" instead of the
-number, and for numbers divisible by 5 (and not 3), print "Buzz" instead.
-When you have that working, modify your program to print "FizzBuzz" for
-numbers that are divisible by both 3 and 5 (and still print "Fizz" or "Buzz"
-for numbers divisible by only one of those).
-(This is actually an interview question that has been claimed to weed out
-a significant percentage of programmer candidates. So if you solved it, your
-labor market value just went up.)*/
-
 //prints numbers 1-100, fizz if divisible by 3, buzz if divisible by 5, fizzbuzz if both
 function fizzBuzz()
 {
@@ -31,6 +21,25 @@ function fizzBuzz()
     }
 }
 
+//returns the number of "B"s in the given string
+function countBs(str)
+{
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        if(str[i] === "B") {
+            count++;
+        }
+    }
+    return count;
+}
+
 
 //test my functions
 fizzBuzz();
+
+console.log("Counting the B's in: hello")
+console.log(countBs("hello"));
+console.log("Counting the B's in: BbbbbbB")
+console.log(countBs("BbbbbbB"));
+console.log("Counting the B's in: buBBles")
+console.log(countBs("BuBBles"));
